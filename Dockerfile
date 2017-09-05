@@ -10,6 +10,7 @@ RUN npm install
 
 # Bundle app source
 COPY . /usr/src/app
+CMD ["echo", "Hello world from Nodejs"]
 
 EXPOSE 8080
-CMD [ "npm", "start" ]
+CMD [ "node",  "/usr/src/app/server.js" ]
